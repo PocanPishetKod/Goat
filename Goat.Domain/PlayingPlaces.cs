@@ -39,11 +39,11 @@ namespace Goat.Domain
             place.Player = null;
         }
 
-        public PlayingPlace Find(uint playerId)
+        public PlayingPlace? Find(uint playerId)
         {
             foreach (var place in _playingPlaces)
             {
-                if (place.Player.Id == playerId)
+                if (place.Player != null && place.Player.Id == playerId)
                     return place;
             }
 
@@ -61,7 +61,7 @@ namespace Goat.Domain
             return true;
         }
 
-        private PlayingPlace FindNextFreePlace()
+        private PlayingPlace? FindNextFreePlace()
         {
             foreach (var place in _playingPlaces)
             {

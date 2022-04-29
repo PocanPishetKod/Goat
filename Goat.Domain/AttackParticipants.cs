@@ -7,7 +7,7 @@ namespace Goat.Domain
     {
         private readonly List<Participant> _participants;
 
-        public GamePlayer CurrentMover { get; private set; }
+        public GamePlayer? CurrentMover { get; private set; }
 
         public AttackParticipants(IReadOnlyList<Participant> participants)
         {
@@ -32,7 +32,7 @@ namespace Goat.Domain
             return false;
         }
 
-        private GamePlayer FindNextMover()
+        private GamePlayer? FindNextMover()
         {
             if (CurrentMover == null)
                 return _participants[0].Player;

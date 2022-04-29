@@ -18,7 +18,7 @@ namespace Goat.Domain
             return result;
         }
 
-        private PlayerRoundTotal CalculatePoints(GamePlayer player, GamePlayer maxPointsPlayer, int playersCount)
+        private PlayerRoundTotal CalculatePoints(GamePlayer player, GamePlayer? maxPointsPlayer, int playersCount)
         {
             if (maxPointsPlayer != null && player.Id == maxPointsPlayer.Id)
                 return new PlayerRoundTotal(player, 0);
@@ -35,7 +35,7 @@ namespace Goat.Domain
             throw new InvalidOperationException("Invalid calculate player points");
         }
 
-        private GamePlayer FindPlayerWithMaxPoints(IReadOnlyList<GamePlayer> players)
+        private GamePlayer? FindPlayerWithMaxPoints(IReadOnlyList<GamePlayer> players)
         {
             var maxPointsPlayer = players[0];
             for (int i = 1; i < players.Count; i++)

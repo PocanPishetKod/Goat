@@ -9,7 +9,7 @@ namespace Goat.Domain
     {
         private readonly PlayingPlaces _places;
         private readonly DeckOfCards _deckOfCards;
-        private Game _currentGame;
+        private Game? _currentGame;
 
         public uint Id { get; }
 

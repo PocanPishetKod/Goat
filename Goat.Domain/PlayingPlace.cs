@@ -4,7 +4,7 @@ namespace Goat.Domain
 {
     public class PlayingPlace
     {
-        public Player Player { get; set; }
+        public Player? Player { get; set; }
 
         public bool IsFree => Player == null;
 

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goat.Domain", "Goat.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventEngine", "EventEngine\EventEngine.csproj", "{BD218E5C-301B-4B52-9C33-1CCDA5767FE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goat.Application", "Goat.Application\Goat.Application.csproj", "{C24AD5C4-8BC6-4E42-B616-C0F563E26170}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{BD218E5C-301B-4B52-9C33-1CCDA5767FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD218E5C-301B-4B52-9C33-1CCDA5767FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD218E5C-301B-4B52-9C33-1CCDA5767FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24AD5C4-8BC6-4E42-B616-C0F563E26170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24AD5C4-8BC6-4E42-B616-C0F563E26170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24AD5C4-8BC6-4E42-B616-C0F563E26170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24AD5C4-8BC6-4E42-B616-C0F563E26170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

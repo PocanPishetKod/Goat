@@ -9,8 +9,8 @@ namespace Goat.Domain
         private readonly List<GamePlayer> _participants;
         private readonly DeckOfCards _deckOfCards;
         private GameState _state;
-        private Round _currentRound;
-        private GamePlayer _winner;
+        private Round? _currentRound;
+        private GamePlayer? _winner;
 
         public Game(PlayingPlaces playingPlaces, DeckOfCards deckOfCards)
         {
@@ -35,6 +35,9 @@ namespace Goat.Domain
                 throw new InvalidOperationException("Game are not started");
 
             var moveParameters = new MoveParameters(_participants.Find(p => p.Id == moverId), playingCards);
+
+            if (_currentRound == null)
+                throw new InvalidOperationException("Current round is null");
 
             _currentRound.MakeMove(moveParameters);
 
@@ -83,7 +86,7 @@ namespace Goat.Domain
             return roundParticipants;
         }
 
-        private GamePlayer CalculateNextRoundFirstMover()
+        private GamePlayer? CalculateNextRoundFirstMover()
         {
             if (_currentRound.LastAttackWinner.Score < 12)
                 return _currentRound.LastAttackWinner;

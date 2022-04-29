@@ -13,9 +13,7 @@ namespace Goat.Domain
 
         public bool Finished { get; private set; }
 
-        public GamePlayer Winner { get; private set; }
-
-        public GamePlayer CurrentMover => _participants.CurrentMover;
+        public GamePlayer? Winner { get; private set; }
 
         public Attack(Suit trump, IReadOnlyList<Participant> participants)
         {
@@ -29,6 +27,9 @@ namespace Goat.Domain
         {
             if (Finished)
                 throw new InvalidOperationException("Attack already completed");
+
+            if (_participants.CurrentMover == null)
+                throw new InvalidOperationException("Current mover is null");
 
             if (_participants.CurrentMover.Id != moveParameters.Mover.Id)
                 throw new InvalidOperationException($"Player {moveParameters.Mover.Id} cannot move now");
@@ -93,6 +94,9 @@ namespace Goat.Domain
 
         private void GiveTrickToWinner()
         {
+            if (Winner == null)
+                throw new InvalidOperationException("Winner is null");
+
             foreach (var move in _moves)
             {
                 Winner.AddCardsToDiscardPile(move.PlayingCardPositions.Select(pp => pp.PlayingCard).ToList());
