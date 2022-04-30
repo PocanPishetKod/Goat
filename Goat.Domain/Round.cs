@@ -9,7 +9,7 @@ namespace Goat.Domain
         private readonly RoundTotalCalculator _roundTotalCalculator;
         private readonly List<Participant> _participants;
         private readonly DeckOfCards _deckOfCards;
-        private Attack _currentAttack;
+        private Attack? _currentAttack;
         private Suit _trump;
 
         public GamePlayer LastAttackWinner { get; private set; }
