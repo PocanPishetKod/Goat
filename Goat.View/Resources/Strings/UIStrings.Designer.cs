@@ -61,11 +61,20 @@ namespace Goat.View.Resources.Strings {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Начать игру.
+        ///   Ищет локализованную строку, похожую на Игра офлайн.
         /// </summary>
-        internal static string StartGameButtonText {
+        internal static string StartOfflineGameButtonText {
             get {
-                return ResourceManager.GetString("StartGameButtonText", resourceCulture);
+                return ResourceManager.GetString("StartOfflineGameButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Игра онлайн.
+        /// </summary>
+        internal static string StartOnlineGameButtonText {
+            get {
+                return ResourceManager.GetString("StartOnlineGameButtonText", resourceCulture);
             }
         }
     }

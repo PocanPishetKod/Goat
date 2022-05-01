@@ -9,4 +9,8 @@
     <ProjectReference Include="..\Goat.Domain\Goat.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
 </Project>

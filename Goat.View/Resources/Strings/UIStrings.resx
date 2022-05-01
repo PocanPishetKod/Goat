@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="StartGameButtonText" xml:space="preserve">
-    <value>Начать игру</value>
+  <data name="StartOfflineGameButtonText" xml:space="preserve">
+    <value>Игра офлайн</value>
+  </data>
+  <data name="StartOnlineGameButtonText" xml:space="preserve">
+    <value>Игра онлайн</value>
   </data>
 </root>

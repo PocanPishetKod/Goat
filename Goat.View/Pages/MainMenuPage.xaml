@@ -2,9 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Goat.View.MainMenuPage"
+             xmlns:uiStrings="clr-namespace:Goat.View.Resources.Strings"
              Title="MainMenuPage">
-    
+
     <StackLayout>
-        <Button Text="Начать игру" VerticalOptions="Center" HorizontalOptions="Center"></Button>
+        <Button Text="{x:Static uiStrings:UIStrings.StartOfflineGameButtonText}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"></Button>
     </StackLayout>
 </ContentPage>

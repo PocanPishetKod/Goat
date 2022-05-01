@@ -6,6 +6,6 @@ public partial class App : Microsoft.Maui.Controls.Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new MainMenuPage();
 	}
 }
