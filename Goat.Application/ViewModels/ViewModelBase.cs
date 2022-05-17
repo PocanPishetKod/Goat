@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Goat.Application.ViewModels
 {
-    public class MainMenuViewModel : ViewModelBase
+    public abstract class ViewModelBase
     {
-
     }
 }

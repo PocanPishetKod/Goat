@@ -5,7 +5,7 @@
              xmlns:uiStrings="clr-namespace:Goat.View.Resources.Strings"
              Title="MainMenuPage">
 
-    <StackLayout>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Button Text="{x:Static uiStrings:UIStrings.StartOfflineGameButtonText}"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"></Button>

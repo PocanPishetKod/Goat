@@ -10,6 +10,9 @@ namespace Goat.Common.DI
             where TInterface : class
             where TImplementation : class, TInterface;
 
+        IServiceCollectionWrapper AddTransient<TImplementation>()
+            where TImplementation : class;
+
         IServiceCollectionWrapper AddSingleton<TInterface, TImplementation>()
             where TInterface : class
             where TImplementation : class, TInterface;

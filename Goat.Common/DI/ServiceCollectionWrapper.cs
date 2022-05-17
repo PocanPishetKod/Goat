@@ -34,5 +34,12 @@ namespace Goat.Common.DI
             _services.AddSingleton<TImplementation, TImplementation>();
             return this;
         }
+
+        public IServiceCollectionWrapper AddTransient<TImplementation>()
+            where TImplementation : class
+        {
+            _services.AddTransient<TImplementation>();
+            return this;
+        }
     }
 }
