@@ -17,7 +17,7 @@ namespace Goat.Common.DI
 		public IReadOnlyCollection<Assembly> GetCustomAssemblies()
 		{
 			var foundedAssemblies = new List<Assembly>();
-			var currentAssembly = Assembly.GetEntryAssembly();
+			var currentAssembly = Assembly.GetExecutingAssembly();
 
 			foundedAssemblies.Add(currentAssembly);
 
