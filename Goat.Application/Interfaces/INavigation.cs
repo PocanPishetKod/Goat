@@ -11,5 +11,7 @@ namespace Goat.Application.Interfaces
         Task Navigate<TViewModel>() where TViewModel : ViewModelBase;
 
         Task NavigateModal<TViewModel>() where TViewModel : ViewModelBase;
+
+        Task Back();
     }
 }

@@ -1,11 +1,13 @@
-﻿namespace Goat.View;
+﻿using Goat.Application.ViewModels;
+
+namespace Goat.View;
 
 public partial class App : Microsoft.Maui.Controls.Application
 {
-	public App()
+	public App(MainMenuViewModel viewModel)
 	{
 		InitializeComponent();
 
-		MainPage = new MainMenuPage();
+		MainPage = new MainMenuPage(viewModel);
 	}
 }

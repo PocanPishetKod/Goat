@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Goat.View.Pages.GameSettingsPage"
+             Title="GameSettingsPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Orientation="Horizontal">
+            <RadioButton Content="2" IsEnabled="True"></RadioButton>
+            <RadioButton Content="3"></RadioButton>
+            <RadioButton Content="4"></RadioButton>
+        </StackLayout>
+
+        <Button Text="Начать игру"></Button>
+    </StackLayout>
+</ContentPage>

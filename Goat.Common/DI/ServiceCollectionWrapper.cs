@@ -31,7 +31,7 @@ namespace Goat.Common.DI
 
         IServiceCollectionWrapper IServiceCollectionWrapper.AddSingleton<TInterface, TImplementation>()
         {
-            _services.AddSingleton<TImplementation, TImplementation>();
+            _services.AddSingleton<TInterface, TImplementation>();
             return this;
         }
 

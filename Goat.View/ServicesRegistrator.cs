@@ -7,6 +7,7 @@ using Goat.Application.Interfaces;
 using Goat.Application.ViewModels;
 using Goat.Common.DI;
 using Goat.View.Navigation;
+using Goat.View.Pages;
 
 namespace Goat.View
 {
@@ -15,7 +16,9 @@ namespace Goat.View
         public void Register(IServiceCollectionWrapper services)
         {
             services.AddSingleton<Application.Interfaces.INavigation, Navigation.Navigation>()
-                .AddSingleton<INavigationAssotiationsProvider, NavigationAssotiationsProvider>();
+                .AddSingleton<INavigationAssotiationsProvider, NavigationAssotiationsProvider>()
+                .AddTransient<MainMenuPage>()
+                .AddTransient<GameSettingsPage>();
         }
     }
 }

@@ -17,30 +17,29 @@ namespace Goat.Common.DI
 		public IReadOnlyCollection<Assembly> GetCustomAssemblies()
 		{
 			var foundedAssemblies = new List<Assembly>();
-			var currentAssembly = Assembly.GetExecutingAssembly();
+			var currentAssembly = Assembly.GetEntryAssembly();
 
 			foundedAssemblies.Add(currentAssembly);
 
 			var ra = currentAssembly.GetReferencedAssemblies();
-			return GetCustomReferencesAssemblies(currentAssembly, foundedAssemblies);
+			GetCustomReferencesAssemblies(currentAssembly, foundedAssemblies);
+			return foundedAssemblies;
 		}
 
-		private IReadOnlyCollection<Assembly> GetCustomReferencesAssemblies(
+		private void GetCustomReferencesAssemblies(
 			Assembly target, List<Assembly> foundedAssemblies)
 		{
 			foreach (var referencedAssembly in target.GetReferencedAssemblies().Where(a => a.Name.StartsWith("Goat.")))
 			{
-				var assembly = foundedAssemblies.FirstOrDefault(a => a.FullName == referencedAssembly.FullName);
+				var assembly = foundedAssemblies.FirstOrDefault(a => a.GetName().Name == referencedAssembly.Name);
 				if (assembly == null)
 				{
 					assembly = Assembly.Load(referencedAssembly);
 					foundedAssemblies.Add(assembly);
 				}
 
-				foundedAssemblies.AddRange(GetCustomReferencesAssemblies(assembly, foundedAssemblies));
-			}
-
-			return foundedAssemblies;
+				GetCustomReferencesAssemblies(assembly, foundedAssemblies);
+            }
 		}
 	}
 }

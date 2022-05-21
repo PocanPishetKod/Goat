@@ -11,6 +11,7 @@ namespace Goat.Application
         public void Register(IServiceCollectionWrapper services)
         {
             services.AddTransient<MainMenuViewModel>();
+            services.AddTransient<GameSettingsViewModel>();
         }
     }
 }

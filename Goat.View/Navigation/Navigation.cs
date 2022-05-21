@@ -20,6 +20,20 @@ namespace Goat.View.Navigation
 
         public INavigation PageNavigation => App.Current.MainPage.Navigation;
 
+        public Page CurrentPage => ((NavigationPage)App.Current.MainPage).CurrentPage;
+
+        public async Task Back()
+        {
+            if (CurrentPageIsModal())
+            {
+                await PageNavigation.PopModalAsync();
+            }
+            else
+            {
+                await PageNavigation.PopAsync();
+            }
+        }
+
         public async Task Navigate<TViewModel>() where TViewModel : ViewModelBase
         {
             await PageNavigation.PushAsync(FindPage<TViewModel>());
@@ -43,6 +57,16 @@ namespace Goat.View.Navigation
                 throw new InvalidOperationException($"Page {pageType.Name} not registered");
 
             return (Page)page;
+        }
+
+        private bool CurrentPageIsModal()
+        {
+            var lastModalPage = PageNavigation.ModalStack.LastOrDefault();
+
+            if (lastModalPage == null || lastModalPage != CurrentPage)
+                return false;
+
+            return true;
         }
     }
 }

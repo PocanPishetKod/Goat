@@ -8,6 +8,7 @@
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Button Text="{x:Static uiStrings:UIStrings.StartOfflineGameButtonText}"
                 VerticalOptions="Center"
-                HorizontalOptions="Center"></Button>
+                HorizontalOptions="Center"
+                Command="{Binding Path=StartOfflineGameCommand}"></Button>
     </StackLayout>
 </ContentPage>

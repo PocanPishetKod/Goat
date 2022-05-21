@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Goat.Application.ViewModels;
+using Goat.View.Pages;
 
 namespace Goat.View.Navigation
 {
@@ -32,7 +33,8 @@ namespace Goat.View.Navigation
         {
             _navigationInfos = new NavigationInfo[]
             {
-                new NavigationInfo(typeof(MainMenuViewModel), typeof(MainMenuPage))
+                new NavigationInfo(typeof(MainMenuViewModel), typeof(MainMenuPage)),
+                new NavigationInfo(typeof(GameSettingsViewModel), typeof(GameSettingsPage))
             };
         }
 

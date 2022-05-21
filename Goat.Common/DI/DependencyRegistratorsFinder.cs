@@ -46,7 +46,7 @@ namespace Goat.Common.DI
 
         private IReadOnlyCollection<Type> FindTargetTypes(Assembly assembly)
         {
-            return assembly.ExportedTypes
+            return assembly.DefinedTypes
                 .Where(t => !t.IsInterface && t.GetInterface(nameof(IDependencyRegistrator)) != null)
                 .ToList();
         }
