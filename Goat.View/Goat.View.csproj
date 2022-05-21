@@ -37,13 +37,92 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\Cards\cardBack.png" />
+	  <None Remove="Resources\Images\Cards\cardClubs10.png" />
+	  <None Remove="Resources\Images\Cards\cardClubs6.png" />
+	  <None Remove="Resources\Images\Cards\cardClubs7.png" />
+	  <None Remove="Resources\Images\Cards\cardClubs8.png" />
+	  <None Remove="Resources\Images\Cards\cardClubs9.png" />
+	  <None Remove="Resources\Images\Cards\cardClubsA.png" />
+	  <None Remove="Resources\Images\Cards\cardClubsJ.png" />
+	  <None Remove="Resources\Images\Cards\cardClubsK.png" />
+	  <None Remove="Resources\Images\Cards\cardClubsQ.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamonds10.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamonds6.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamonds7.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamonds8.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamonds9.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamondsA.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamondsJ.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamondsK.png" />
+	  <None Remove="Resources\Images\Cards\cardDiamondsQ.png" />
+	  <None Remove="Resources\Images\Cards\cardHearts10.png" />
+	  <None Remove="Resources\Images\Cards\cardHearts6.png" />
+	  <None Remove="Resources\Images\Cards\cardHearts7.png" />
+	  <None Remove="Resources\Images\Cards\cardHearts8.png" />
+	  <None Remove="Resources\Images\Cards\cardHearts9.png" />
+	  <None Remove="Resources\Images\Cards\cardHeartsA.png" />
+	  <None Remove="Resources\Images\Cards\cardHeartsJ.png" />
+	  <None Remove="Resources\Images\Cards\cardHeartsK.png" />
+	  <None Remove="Resources\Images\Cards\cardHeartsQ.png" />
+	  <None Remove="Resources\Images\Cards\cardSpades10.png" />
+	  <None Remove="Resources\Images\Cards\cardSpades6.png" />
+	  <None Remove="Resources\Images\Cards\cardSpades7.png" />
+	  <None Remove="Resources\Images\Cards\cardSpades8.png" />
+	  <None Remove="Resources\Images\Cards\cardSpades9.png" />
+	  <None Remove="Resources\Images\Cards\cardSpadesA.png" />
+	  <None Remove="Resources\Images\Cards\cardSpadesJ.png" />
+	  <None Remove="Resources\Images\Cards\cardSpadesK.png" />
+	  <None Remove="Resources\Images\Cards\cardSpadesQ.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Images\Cards\cardBack.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubs10.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubs6.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubs7.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubs8.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubs9.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubsA.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubsJ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubsK.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardClubsQ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamonds10.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamonds6.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamonds7.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamonds8.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamonds9.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamondsA.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamondsJ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamondsK.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardDiamondsQ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHearts10.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHearts6.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHearts7.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHearts8.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHearts9.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHeartsA.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHeartsJ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHeartsK.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardHeartsQ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpades10.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpades6.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpades7.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpades8.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpades9.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpadesA.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpadesJ.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpadesK.png" />
+	  <EmbeddedResource Include="Resources\Images\Cards\cardSpadesQ.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -61,7 +140,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\PlayingCard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\GameSettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\GameTablePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MainMenuPage.xaml">
